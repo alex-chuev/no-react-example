@@ -1,0 +1,4 @@
+.nav { margin-bottom: 1rem; }
+.nav a { padding: .3rem .7rem; border-radius: 6px; text-decoration: none; }
+.nav a.active { color: var(--accent-text); background: var(--accent); }
+.card h2 { margin-top: 0; }

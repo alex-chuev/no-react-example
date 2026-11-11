@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%F0%9F%A7%A9%3C/text%3E%3C/svg%3E">
+  <title>No build step · NoReact examples</title>
+  <link rel="stylesheet" href="../../shared/style.css">
+  <!-- The global build exposes everything as window.NoReact. -->
+  <script src="https://unpkg.com/no-react@2/dist/no-react.min.js"></script>
+</head>
+<body>
+  <header class="page-header">
+    <a href="../../">← All examples</a>
+    <a href="https://github.com/alex-chuev/no-react-example/tree/master/examples/21-no-build">View source</a>
+  </header>
+  <main>
+    <h1>No build step</h1>
+    <p class="lead">The global build from a &lt;script&gt; tag and createElement, no bundler. Open this page's source: it is all there.</p>
+    <div id="app"></div>
+  </main>
+
+  <script>
+    const {createElement: h, render, signal, computed, each} = NoReact;
+
+    const items = signal(['Milk', 'Bread']);
+    const draft = signal('');
+    const count = computed(() => items().length);
+
+    const add = event => {
+      event.preventDefault();
+
+      if (draft().trim()) {
+        items.update(list => [...list, draft().trim()]);
+        draft.set('');
+      }
+    };
+
+    // h(type, properties, ...children) is what JSX compiles to.
+    const Item = ({name}) =>
+      h('li', null,
+        name, ' ',
+        h('button', {onClick: () => items.update(list => list.filter(item => item !== name))}, '×'),
+      );
+
+    const App = () =>
+      h('div', {className: 'card stack'},
+        h('form', {className: 'row', onSubmit: add},
+          h('input', {type: 'text', placeholder: 'Add an item', value: draft, onInput: event => draft.set(event.target.value)}),
+          h('button', {className: 'primary'}, 'Add'),
+        ),
+        h('p', {className: 'muted'}, 'Shopping list: ', count, ' items'),
+        h('ul', null, each(items, name => h(Item, {name}))),
+      );
+
+    render(h(App), document.getElementById('app'));
+  </script>
+</body>
+</html>

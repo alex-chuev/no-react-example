@@ -1,0 +1,8 @@
+.controls label { display: flex; gap: .5rem; align-items: center; }
+.controls input[type=range] { flex: 1; }
+.stage { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; min-height: 300px; border-radius: var(--radius); transition: background .3s; }
+.stage.light { background: #f0f2f5; color: #1c2024; }
+.stage.dark { background: #0b0d10; color: #e6e8eb; }
+.box { transition: border-radius .2s, box-shadow .2s; }
+.box.rounded { border-radius: var(--radius); }
+.box.shadow { box-shadow: 0 12px 32px rgb(0 0 0 / .35); }

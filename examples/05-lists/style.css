@@ -1,0 +1,6 @@
+.people { margin: 1rem 0; }
+.people li { display: flex; gap: .5rem; align-items: center; padding: .4rem .5rem; border-bottom: 1px solid var(--border); border-radius: 4px; }
+.people .id { width: 2.5rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.people .name { width: 6rem; }
+.people input { flex: 1; min-width: 0; }
+.people .score { width: 3ch; text-align: right; font-variant-numeric: tabular-nums; }

@@ -1,0 +1,6 @@
+.stopwatch { max-width: 24rem; margin: 0 auto; }
+.display { padding: 1rem 0; text-align: center; font-size: 3.5rem; font-weight: 300; font-variant-numeric: tabular-nums; }
+.controls { justify-content: center; margin-bottom: 1rem; }
+.laps li { display: flex; justify-content: space-between; padding: .4rem 0; border-top: 1px solid var(--border); font-variant-numeric: tabular-nums; }
+.laps .fastest { color: var(--success); }
+.laps .slowest { color: var(--danger); }

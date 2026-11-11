@@ -1,0 +1,10 @@
+main { max-width: 64rem; }
+input[type=search] { flex: 1; min-width: 12rem; }
+.table { overflow-x: auto; border: 1px solid var(--border); border-radius: var(--radius); }
+table { width: 100%; border-collapse: collapse; font-size: .9rem; }
+th, td { padding: .45rem .75rem; text-align: left; white-space: nowrap; border-bottom: 1px solid var(--border); }
+th { background: var(--surface); }
+th button { padding: 0; border: none; background: none; font-weight: 700; }
+tbody tr:hover { background: var(--surface); }
+.numeric { text-align: right; font-variant-numeric: tabular-nums; }
+.pager { justify-content: center; }

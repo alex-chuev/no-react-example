@@ -1,0 +1,5 @@
+.logo { padding: .5rem 1rem; font-weight: 700; color: var(--accent-text); background: var(--accent); border-radius: var(--radius); }
+canvas { width: 100%; height: auto; background: var(--bg); border: 1px solid var(--border); border-radius: 6px; touch-action: none; cursor: crosshair; }
+.chart { display: flex; align-items: flex-end; gap: 3px; height: 120px; }
+.chart span { flex: 1; background: var(--accent); border-radius: 2px 2px 0 0; }
+input[type=text] { flex: 1; }

@@ -1,0 +1,15 @@
+.clock { display: block; width: 220px; margin: 0 auto; }
+.clock .face { fill: var(--bg); stroke: var(--border); stroke-width: 1.5; }
+.clock line { stroke: var(--text); stroke-linecap: round; }
+.clock .tick { stroke-width: 1.5; }
+.clock .hour { stroke-width: 3.5; }
+.clock .minute { stroke-width: 2.5; }
+.clock .second { stroke: var(--danger); stroke-width: 1; }
+.clock .pin { fill: var(--danger); }
+.chart { width: 100%; max-width: 480px; margin: 0 auto; }
+.chart rect { fill: var(--accent); transition: y .2s, height .2s; }
+.chart text { font-size: 10px; text-anchor: middle; fill: var(--muted); }
+.chart .value { fill: var(--text); }
+.slider { display: flex; gap: .75rem; align-items: center; }
+.slider span { width: 2.5rem; }
+.slider input { flex: 1; }

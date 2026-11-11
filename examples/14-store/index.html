@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%F0%9F%A7%A9%3C/text%3E%3C/svg%3E">
+  <title>Shared store · NoReact examples</title>
+  <link rel="stylesheet" href="../../shared/style.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header class="page-header">
+    <a href="../../">← All examples</a>
+    <a href="https://github.com/alex-chuev/no-react-example/tree/master/examples/14-store">View source</a>
+  </header>
+  <main>
+    <h1>Shared store</h1>
+    <p class="lead">A cart shared by components rendered into separate places of a page.</p>
+    <!-- Pretend this is a server-rendered page with three places for widgets. -->
+    <div class="shop-header">
+      <strong>The corner shop</strong>
+      <span id="cart-badge"></span>
+    </div>
+    <div id="catalog"></div>
+    <div id="cart"></div>
+  </main>
+  <script type="module" src="./main.tsx"></script>
+</body>
+</html>

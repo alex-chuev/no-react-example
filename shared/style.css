@@ -1,0 +1,120 @@
+:root {
+  color-scheme: light dark;
+  --bg: #ffffff;
+  --surface: #f5f6f8;
+  --border: #dde1e6;
+  --text: #1c2024;
+  --muted: #646b73;
+  --accent: #2f6feb;
+  --accent-text: #ffffff;
+  --danger: #d1242f;
+  --success: #1a7f37;
+  --radius: 8px;
+  font: 16px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #111418;
+    --surface: #1b1f24;
+    --border: #30363d;
+    --text: #e6e8eb;
+    --muted: #9198a1;
+    --accent: #4c8dff;
+    --danger: #f85149;
+    --success: #3fb950;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+
+a { color: var(--accent); }
+
+.page-header {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: .75rem 1rem;
+  border-bottom: 1px solid var(--border);
+  font-size: .9rem;
+}
+
+.page-header a { text-decoration: none; }
+
+main {
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 4rem;
+}
+
+h1 { margin: 0 0 .25rem; font-size: 1.75rem; }
+h2 { margin: 2rem 0 .75rem; font-size: 1.2rem; }
+
+.lead { margin: 0 0 1.5rem; color: var(--muted); }
+
+.card {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.row { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; }
+.stack { display: flex; flex-direction: column; gap: .5rem; }
+.muted { color: var(--muted); }
+.error { color: var(--danger); }
+
+button, input, select, textarea {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  padding: .35rem .8rem;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover:not(:disabled) { border-color: var(--accent); }
+button:disabled { opacity: .5; cursor: default; }
+
+button.primary, button[aria-pressed=true] {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-text);
+}
+
+input[type=text], input[type=email], input[type=number], input[type=search], input[type=password], select, textarea {
+  padding: .4rem .6rem;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+input:focus-visible, select:focus-visible, textarea:focus-visible, button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+code, pre { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .875em; }
+
+pre {
+  overflow: auto;
+  padding: .75rem;
+  margin: 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+ul.plain { list-style: none; padding: 0; margin: 0; }

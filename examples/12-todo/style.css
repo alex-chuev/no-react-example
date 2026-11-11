@@ -1,0 +1,15 @@
+.todoapp { padding: 0; }
+.todoapp form { padding: .75rem; border-bottom: 1px solid var(--border); flex-wrap: nowrap; }
+.todoapp form input { flex: 1; font-size: 1.1rem; }
+.toggle-all { transform: rotate(90deg); }
+.todo-list li { border-bottom: 1px solid var(--border); }
+.todo-list .view { display: flex; gap: .75rem; align-items: center; padding: .6rem .75rem; }
+.todo-list label { flex: 1; cursor: text; word-break: break-word; }
+.todo-list li.done label { text-decoration: line-through; color: var(--muted); }
+.todo-list .edit { width: calc(100% - 1.5rem); margin: .35rem .75rem; }
+.todo-list .remove { visibility: hidden; border: none; color: var(--danger); background: none; font-size: 1.2rem; }
+.todo-list li:hover .remove, .todo-list .remove:focus-visible { visibility: visible; }
+.todoapp footer { justify-content: space-between; padding: .6rem .75rem; color: var(--muted); font-size: .9rem; }
+.filters { display: flex; gap: .5rem; }
+.filters a { padding: .1rem .5rem; border: 1px solid transparent; border-radius: 4px; color: inherit; text-decoration: none; }
+.filters a.selected { border-color: var(--accent); color: var(--text); }

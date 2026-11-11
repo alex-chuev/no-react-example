@@ -1,0 +1,10 @@
+.backdrop { position: fixed; inset: 0; display: grid; place-items: center; padding: 1rem; background: rgb(0 0 0 / .45); animation: fade .15s; }
+.modal { width: min(26rem, 100%); padding: 1.25rem; background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: 0 16px 48px rgb(0 0 0 / .3); }
+.modal h2 { margin: 0 0 .5rem; }
+.actions { justify-content: flex-end; }
+.toasts { position: fixed; right: 1rem; bottom: 1rem; display: flex; flex-direction: column; gap: .5rem; width: min(20rem, calc(100% - 2rem)); }
+.toast { display: flex; justify-content: space-between; align-items: center; gap: .5rem; padding: .6rem .8rem; color: #fff; background: #3b4048; border-radius: 6px; box-shadow: 0 6px 20px rgb(0 0 0 / .25); }
+.toast.success { background: var(--success); }
+.toast.danger { background: var(--danger); }
+.toast button { padding: 0 .3rem; color: inherit; background: none; border: none; font-size: 1.1rem; }
+@keyframes fade { from { opacity: 0; } }

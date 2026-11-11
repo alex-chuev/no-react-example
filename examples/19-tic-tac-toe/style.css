@@ -1,0 +1,9 @@
+.game { display: flex; flex-wrap: wrap; gap: 2rem; }
+.status { margin-top: 0; font-size: 1.25rem; font-weight: 600; }
+.board { display: grid; grid-template-columns: repeat(3, 5rem); gap: .35rem; }
+.square { width: 5rem; height: 5rem; padding: 0; font-size: 2.25rem; font-weight: 700; }
+.square:disabled { opacity: 1; cursor: default; }
+.square.win { color: var(--accent-text); background: var(--success); border-color: var(--success); }
+.game h2 { margin-top: 0; }
+.moves { margin: 0; padding-left: 1.5rem; }
+.moves li { margin-bottom: .3rem; }

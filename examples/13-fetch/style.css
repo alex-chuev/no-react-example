@@ -1,0 +1,4 @@
+.search { width: 100%; font-size: 1.1rem; margin-bottom: 1rem; }
+.results li p { margin: .25rem 0 0; color: var(--muted); }
+.spinner { display: inline-block; width: 1em; height: 1em; vertical-align: -.15em; border: 2px solid var(--border); border-top-color: var(--accent); border-radius: 50%; animation: spin .7s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }

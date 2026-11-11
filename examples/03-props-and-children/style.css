@@ -1,0 +1,7 @@
+.card h2 { margin-top: 0; }
+.panel { padding: .75rem; border: 1px dashed var(--border); border-radius: 6px; }
+.panel h3 { margin: 0 0 .5rem; font-size: 1rem; }
+.badge { padding: .1rem .5rem; border-radius: 999px; font-size: .8rem; background: var(--border); }
+.badge.good { background: var(--success); color: #fff; }
+.badge.bad { background: var(--danger); color: #fff; }
+input[type=range] { width: 100%; }
