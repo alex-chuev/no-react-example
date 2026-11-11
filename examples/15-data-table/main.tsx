@@ -109,12 +109,12 @@ render(
   <div className="stack">
     <div className="row">
       <input type="search" placeholder="Search by name or city" value={search} onInput={(event: any) => search.set(event.target.value)} />
-      <select onChange={(event: any) => department.set(event.target.value)}>
-        <option value="" selected={() => !department()}>All departments</option>
-        {departments.map(name => <option value={name} selected={() => department() === name}>{name}</option>)}
+      <select value={department} onChange={(event: any) => department.set(event.target.value)}>
+        <option value="">All departments</option>
+        {departments.map(name => <option value={name}>{name}</option>)}
       </select>
-      <select onChange={(event: any) => pageSize.set(+event.target.value)}>
-        {[15, 30, 50].map(size => <option value={size} selected={size === pageSize.peek()}>{size} per page</option>)}
+      <select value={pageSize} onChange={(event: any) => pageSize.set(+event.target.value)}>
+        {[15, 30, 50].map(size => <option value={size}>{size} per page</option>)}
       </select>
       <button onClick={() => batch(() => { search.set(''); department.set(''); })}>Reset</button>
     </div>

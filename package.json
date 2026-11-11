@@ -17,7 +17,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "no-react": "^2.0.1"
+    "no-react": "^2.0.3"
   },
   "devDependencies": {
     "typescript": "^7.0.2",

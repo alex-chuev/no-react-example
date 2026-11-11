@@ -10,7 +10,7 @@ const name = signal('');
 const email = signal('');
 const password = signal('');
 const plan = signal<'free' | 'pro' | 'team'>('free');
-const country = signal('nl');
+const country = signal('de');
 const bio = signal('');
 const newsletter = signal(true);
 const touched = signal(false);
@@ -64,9 +64,8 @@ render(
 
     <label>
       Country{' '}
-      {/* Properties are set before children, so the selection goes on the options. */}
-      <select onChange={(event: Event) => country.set((event.target as HTMLSelectElement).value)}>
-        {Object.entries(countries).map(([code, label]) => <option value={code} selected={() => country() === code}>{label}</option>)}
+      <select value={country} onChange={(event: Event) => country.set((event.target as HTMLSelectElement).value)}>
+        {Object.entries(countries).map(([code, label]) => <option value={code}>{label}</option>)}
       </select>
     </label>
 
